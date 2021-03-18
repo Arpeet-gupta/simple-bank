@@ -19,12 +19,15 @@ migrateinit:
 
 migrateup:
 	migrate -path db/migration -database "postgresql://root:secret@192.168.0.121:5432/simple_bank?sslmode=disable" -verbose up
-	# migrate -source db/migration -database postgresql://root:secret@192.168.0.121:5432/simple_bank?sslmode=disable up
 
 migratedown:
 	migrate -path db/migration -database "postgresql://root:secret@192.168.0.121:5432/simple_bank?sslmode=disable" -verbose down
 
 sqlc:
 	sqlc generate
+
+test: 
+	gotest -v -cover ./...
+
 
 .PHONY: postgres createdb dropdb migrateinit migrateup migratedown sqlc
