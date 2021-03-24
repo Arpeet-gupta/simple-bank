@@ -1,4 +1,4 @@
-module github.com/Arpeet-gupta/simple-bank
+module github.com/Arpeet-gupta/simple-bank/v2
 
 go 1.15
 

@@ -29,5 +29,7 @@ sqlc:
 test: 
 	gotest -v -cover ./...
 
+test-transgertx:
+	gotest -v -cover -run TestTransferTx github.com/Arpeet-gupta/simple-bank/v2/db/sqlc
 
-.PHONY: postgres createdb dropdb migrateinit migrateup migratedown sqlc
+.PHONY: postgres createdb dropdb migrateinit migrateup migratedown sqlc test-transgertx
