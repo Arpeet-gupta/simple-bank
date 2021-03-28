@@ -27,7 +27,7 @@ sqlc:
 	sqlc generate
 
 test: 
-	gotest -v -cover ./...
+	go test -v -cover ./...
 
 test-transgertx:
 	go test -v -cover -run TestTransferTx github.com/Arpeet-gupta/simple-bank/v2/db/sqlc
