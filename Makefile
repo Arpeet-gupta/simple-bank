@@ -32,4 +32,7 @@ test:
 test-transgertx:
 	go test -v -cover -run TestTransferTx github.com/Arpeet-gupta/simple-bank/v2/db/sqlc
 
-.PHONY: postgres createdb dropdb migrateinit migrateup migratedown sqlc test-transgertx
+server:
+	go run cmd/server/main.go
+
+.PHONY: postgres createdb dropdb migrateinit migrateup migratedown sqlc test-transgertx server
